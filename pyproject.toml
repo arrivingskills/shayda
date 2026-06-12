@@ -1,0 +1,21 @@
+[project]
+name = "shayda"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Andy Miles", email = "akmiles@icloud.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "docxtpl>=0.20.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+]
+
+[project.scripts]
+shayda = "shayda:main"
+
+[build-system]
+requires = ["uv_build>=0.11.17,<0.12.0"]
+build-backend = "uv_build"
