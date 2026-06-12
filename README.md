@@ -13,3 +13,20 @@
 
 
 https://docxtpl.readthedocs.io/en/latest/
+
+
+# ======
+
+Microsoft has fully deprecated Basic Authentication and App Passwords for all personal and tenant email accounts.
+
+Because of this security policy, a simple username/password script using imaplib will throw an authentication error. To download Outlook emails in Python, the modern standard is to use OAuth 2.0 via the Microsoft Graph API.
+
+The Microsoft Graph API actually makes this process easier because it has a specific endpoint that returns your email as a raw .eml file directly.
+
+Prerequisites
+You will need the msal library (Microsoft Authentication Library) alongside requests and pdfkit:
+
+Bash
+pip install msal requests pdfkit
+Python Script: Download Outlook Emails via Graph API
+This script uses a Device Code Flow. When you run it, it will print a link and a unique code. You open the link in your browser, log into your Outlook account, paste the code, and the script seamlessly takes over to download your latest email as both an .eml and a .pdf.
