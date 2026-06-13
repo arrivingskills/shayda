@@ -30,3 +30,8 @@ Bash
 pip install msal requests pdfkit
 Python Script: Download Outlook Emails via Graph API
 This script uses a Device Code Flow. When you run it, it will print a link and a unique code. You open the link in your browser, log into your Outlook account, paste the code, and the script seamlessly takes over to download your latest email as both an .eml and a .pdf.
+
+
+To sort and route emails by Outlook categories into distinct local folders, we can leverage Microsoft Graph's built-in OData lambda operator ($filter=categories/any(...)). This forces the Microsoft server to do the heavy lifting—returning only the specific emails tagged with your predetermined categories.
+
+The updated script loops through an array of your target categories, dynamically creates corresponding local directories, fetches matching emails, and converts them to .eml and .pdf inside their designated folders.

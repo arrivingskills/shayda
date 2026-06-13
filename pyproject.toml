@@ -9,12 +9,17 @@ authors = [
 requires-python = ">=3.14"
 dependencies = [
     "docxtpl>=0.20.2",
+    "msal>=1.31.1",
     "openpyxl>=3.1.5",
     "pandas>=3.0.3",
+    "pdfkit>=1.0.0",
+    "requests>=2.32.3",
 ]
 
 [project.scripts]
 shayda = "shayda:main"
+outlook_email = "shayda.outlook_email:download_categorized_emails"
+office = "shayda.office:main"
 
 [build-system]
 requires = ["uv_build>=0.11.17,<0.12.0"]
